@@ -1,0 +1,83 @@
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #23294d 60%, #1a1d3a 100%);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  transition: background 0.2s, opacity 0.2s;
+}
+.completed {
+  text-decoration: line-through;
+  color: #aab7ff;
+  opacity: 0.6;
+  background: linear-gradient(90deg, #23294d 60%, #2c2f4a 100%);
+}
+.text {
+  flex: 1;
+  font-size: 1.1rem;
+}
+.checkbox {
+  margin-right: 12px;
+  accent-color: #8f94fb;
+  width: 18px;
+  height: 18px;
+}
+.delete {
+  margin-left: 8px;
+  background: #ff4e6a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.delete:hover {
+  background: #c82333;
+}
+.edit {
+  margin-left: 8px;
+  background: #4e54c8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.edit:hover {
+  background: #23294d;
+}
+.save {
+  margin-left: 8px;
+  background: #2ecc40;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.save:hover {
+  background: #27ae60;
+}
+.cancel {
+  margin-left: 4px;
+  background: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.cancel:hover {
+  background: #888;
+}
