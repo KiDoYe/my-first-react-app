@@ -15,8 +15,8 @@ function TodoForm({ onAdd }) {
   });
 
   // 폼이 제출될 때 실행되는 함수
-  const handleSubmit = (e) => {
-    e.preventDefault(); // 폼의 기본 동작(새로고침) 방지
+  const handleSubmit = (event) => {
+    event.preventDefault(); // 폼의 기본 동작(새로고침) 방지
     if (!value.trim()) return; // 입력값이 비어있으면 추가하지 않음
     onAdd(value.trim(), date); // 부모 컴포넌트(App)로 입력값과 날짜 전달
     setValue(''); // 입력창 비우기
@@ -30,7 +30,7 @@ function TodoForm({ onAdd }) {
       <input
         type="text"
         value={value}
-        onChange={e => setValue(e.target.value)} // 입력값이 바뀔 때마다 value 상태 변경
+        onChange={event => setValue(event.target.value)} // 입력값이 바뀔 때마다 value 상태 변경
         placeholder="할 일을 입력하세요"
         className={styles.input}
       />
@@ -38,7 +38,7 @@ function TodoForm({ onAdd }) {
       <input
         type="date"
         value={date}
-        onChange={e => setDate(e.target.value)} // 날짜가 바뀔 때마다 date 상태 변경
+        onChange={event => setDate(event.target.value)} // 날짜가 바뀔 때마다 date 상태 변경
         className={styles.input}
         style={{ maxWidth: 150 }}
       />
