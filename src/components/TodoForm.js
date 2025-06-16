@@ -17,7 +17,10 @@ function TodoForm({ onAdd }) {
   // 폼이 제출될 때 실행되는 함수
   const handleSubmit = (event) => {
     event.preventDefault(); // 폼의 기본 동작(새로고침) 방지
-    if (!value.trim()) return; // 입력값이 비어있으면 추가하지 않음
+    if (!value.trim()) {
+      alert('할 일을 입력해주세요');
+      return;
+    } // 입력값이 비어있으면 추가하지 않음
     onAdd(value.trim(), date); // 부모 컴포넌트(App)로 입력값과 날짜 전달
     setValue(''); // 입력창 비우기
     // 날짜는 그대로 유지
