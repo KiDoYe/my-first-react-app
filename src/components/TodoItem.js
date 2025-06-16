@@ -19,7 +19,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
   const handleEditClick = () => {
     setIsEditing(true);
     setEditText(todo.text);
-    setEditDate(todo.date || '');
+    setEditDate(todo.date || ''); // 날짜가 없으면 빈 문자열로 초기화
   };
 
   // 텍스트 input 값이 바뀔 때마다 상태 업데이트
@@ -44,7 +44,7 @@ function TodoItem({ todo, onToggle, onDelete, onEdit }) {
   const handleEditCancel = () => {
     setIsEditing(false);
     setEditText(todo.text);
-    setEditDate(todo.date || '');
+    setEditDate(todo.date || ''); // 날짜가 없으면 빈 문자열로 초기화
   };
 
   // 실제로 화면에 보여지는 부분 (JSX)
